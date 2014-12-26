@@ -27,14 +27,14 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	      	<li class="active"><a href="#">最新情報</a></li>
-	        <li class="dropdown">
+	      	<li class="<?php echo Uri::active();?>"><a href="/">最新情報</a></li>
+	        <li class="dropdown <?php echo Uri::active('data');?>">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">データ <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
-	            <li><a href="/character/index">キャラクター</a></li>
-	            <li><a href="/card/index">カード</a></li>
-	            <li><a href="/item/index">アイテム</a></li>
-	            <li><a href="/dungeon/index">ダンジョン</a></li>
+	            <li class="<?php echo Uri::active('data',array('character'));?>"><a href="/data/character/index">キャラクター</a></li>
+	            <li class="<?php echo Uri::active('data',array('card'));?>"><a href="/data/card/index">カード</a></li>
+	            <li class="<?php echo Uri::active('data',array('item'));?>"><a href="/data/item/index">アイテム</a></li>
+	            <li class="<?php echo Uri::active('data',array('dungeon'));?>"><a href="/data/dungeon/index">ダンジョン</a></li>
 	          </ul>
 	        </li>
 	        <li class="dropdown">

@@ -1,7 +1,7 @@
 <div class="row">
 	<h3 class="bs-callout bs-callout-info">キャラクター一覧</h3>
 	<?php foreach ($characters as $character): ?>
-	  <a href="/character/detail?id=<?php echo $character['id']; ?>">
+	  <a href="detail?id=<?php echo $character['id']; ?>">
   	  <div class="row" id="char-list">
     	  <div class="col-sm-4">
     	    <?php echo Asset::img('character/'.$character['path'].'.png', array('class'=>'img-responsive')); ?>

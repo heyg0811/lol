@@ -7,6 +7,7 @@ Autoloader::add_classes(array(
 	// Add classes you want to override here
 	// Example: 'View' => APPPATH.'classes/view.php',
 	'Config'  => APPPATH . 'classes/extension/config.php',
+	'Uri'     => APPPATH . 'classes/extension/uri.php',
 	'MyModel' => APPPATH . 'classes/extension/mymodel.php',
 ));
 
