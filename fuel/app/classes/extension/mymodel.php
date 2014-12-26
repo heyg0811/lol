@@ -10,7 +10,7 @@
  * @package   app
  * @extends   Orm\Model
  */
-class MyOrmModel extends \Orm\Model
+class MyModel extends \Orm\Model
 {
   /**
    * @brif    インサート
@@ -66,7 +66,8 @@ class MyOrmModel extends \Orm\Model
    * @access  public
    * @return
    */
-  public static function updateCount($id) {
+  public static function updateCount($id)
+  {
     DB::query('UPDATE product SET count = count + 1 WHERE id = '. $id)->execute();
   }
 }
