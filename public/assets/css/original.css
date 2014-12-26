@@ -1,0 +1,39 @@
+.bs-callout{
+  padding: 15px;
+  margin: 20px 0;
+  border-left: 1px solid #eee;
+  border-left-width: 5px;
+}
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.bs-callout-warning {
+  border-left-color: #3c763d;
+}
+.list {
+  list-style:none;
+  margin-left:-30px;
+}
+.list > li {
+  padding-bottom:15px;
+}
+.footer {
+  min-height:200px;
+  padding-top:30px;
+  background-color: #375a7f;
+}
+.content {
+  margin-top:60px;
+  background-color: #222222;
+  padding-bottom:30px;
+}
+a {
+  color:white;
+  cursor:pointer;
+}
