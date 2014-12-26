@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>ソウスラ攻略 | トップ</title>
 	<?php echo Asset::css('bootswatch/bootstrap.css'); ?>
 	<?php echo Asset::css('original.css'); ?>
