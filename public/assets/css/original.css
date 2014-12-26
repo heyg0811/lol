@@ -42,19 +42,30 @@ a {
   padding-bottom:30px;
 }
 
+/* キャラクター画面用 */
+.char-list {
+  margin-bottom:20px;
+}
 .char-intro > p {
   font-size:1.2em;
 }
-
 .char-rank{
   float: right !important;
   font-size:0.7em;
   margin-top:5px;
   margin-right:50px;
 }
-
-#char-list {
-  margin-bottom:20px;
+@media (min-width: 992px) {
+  .char-card {
+    width:80%;
+    margin:0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .char-card {
+    width:70%;
+    margin:0 auto;
+  }
 }
 
 .iframe-content {
