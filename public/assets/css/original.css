@@ -63,13 +63,13 @@ a {
   margin-right:50px;
 }
 @media (min-width: 992px) {
-  .char-card {
+  .head-img {
     width:80%;
     margin:0 auto;
   }
 }
 @media (min-width: 1200px) {
-  .char-card {
+  .head-img {
     width:70%;
     margin:0 auto;
   }

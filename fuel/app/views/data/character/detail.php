@@ -1,6 +1,6 @@
 <div class="row">
   <h1 class="char-name"><?php echo $character['name']; ?></h1>
-  <div class="char-card">
+  <div class="head-img">
     <?php echo Asset::img('character/card/'.$character['path'].'.png', array('class'=>'img-responsive')); ?>
   </div>
 	

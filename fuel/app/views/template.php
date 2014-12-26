@@ -59,9 +59,11 @@
 	<div class="col-md-10 col-md-offset-1 content">
 		<div class="row">
 			<header>
-			  <?php if (Uri::segment(1) == null || Uri::segment(1) == 'welcome'): ?>
-				  <?php echo Asset::img('soulslash.jpg', array('class'=>'img-responsive')); ?>
-				<?php endif; ?>
+				<div class="head-img">
+					<?php if (Uri::segment(1) == null || Uri::segment(1) == 'welcome'): ?>
+					  <?php echo Asset::img('soulslash.jpg', array('class'=>'img-responsive')); ?>
+					<?php endif; ?>
+				</div>
 			</header>
 			<div class="container-fluid">
 			  <div class="col-xs-12">
