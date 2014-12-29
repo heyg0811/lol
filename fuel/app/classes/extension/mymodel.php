@@ -70,4 +70,15 @@ class MyModel extends \Orm\Model
   {
     DB::query('UPDATE product SET count = count + 1 WHERE id = '. $id)->execute();
   }
+  
+  /**
+   * @brif    JSONエンコード
+   * @access  public
+   * @return
+   */
+  public static function encode(&$character) {
+    foreach (static::$_json_list as $val) {
+      $character[$val] = json_decode($character[$val],true);
+    }
+  }
 }

@@ -1,3 +1,9 @@
+html,
+body{
+  height:100%;
+  min-height:100%;
+}
+
 a {
   color:white;
   cursor:pointer;
@@ -44,7 +50,7 @@ a {
 
 /* キャラクター画面用 */
 .char-list {
-  margin-bottom:20px;
+  margin-bottom:50px;
 }
 .char-name {
   text-align:center;
@@ -52,6 +58,9 @@ a {
 }
 .char-intro > p {
   font-size:1.2em;
+}
+.char-intro > .row {
+  margin-bottom:20px;
 }
 .char-skill {
   font-size:1.1em;
@@ -73,6 +82,13 @@ a {
     width:70%;
     margin:0 auto;
   }
+}
+
+.comment-list {
+  height:300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom:30px;
 }
 
 .iframe-content {

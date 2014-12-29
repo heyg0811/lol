@@ -7,8 +7,14 @@
     	    <?php echo Asset::img('character/'.$character['path'].'.png', array('class'=>'img-responsive')); ?>
     	  </div>
     	  <div class="col-sm-8 char-intro">
-    	    <h3><?php echo $character['name']; ?><p class="char-rank">ランク<?php echo Config::get('CHARACTER.RANK.'.$character['rank'])?></p></h3>
-    	    
+    	  	<div class="row">
+  	  			<div class="col-sm-9 col-lg-10">
+							<h3><?php echo $character['name']; ?></h3>
+						</div>
+						<div class="col-sm-3 col-lg-2" style="font-size:1.2em; margin-top:15px;">
+							- ランク<?php echo Config::get('CHARACTER.RANK.'.$character['rank'])?>
+						</div>
+    	  	</div>
     	    <p class="text-danger"><?php echo $character['caption']; ?></p>
     	    <p><?php echo $character['description']; ?></p>
     	  </div>

@@ -44,6 +44,33 @@ class Controller_Welcome extends Controller_Template {
 	{
 		$this->template->title = 'トップ';
     $this->template->content  = View::forge('welcome/index');
+    
+    $config = array(
+      'pagination_url' => '/',
+      'total_items' => Model_Notice::query()->count(),
+      'per_page' => 5,
+      'uri_segment' => 'page',
+    );
+    $pagination = Pagination::forge('mypagination',$config);
+    
+    $options = array(
+      'limit' => $pagination->per_page,
+      'offset' => $pagination->offset,
+      'order_by' => array('updated_at'=>'desc'),
+    );
+    $this->template->content->notices = Model_Notice::find('all',$options);
+    $this->template->content->pagination = $pagination;
+    
+    $options = array(
+      'where' => array(array('type',Config::get('COMMENT.TYPE.TOP'))),
+      'order_by' => array('created_at'=>'desc'),
+    );
+    $this->template->content->comments = Model_Comment::find('all',$options);
+    
+    $options = array(
+      'order_by' => array('created_at'=>'desc'),
+    );
+    $this->template->content->character = Model_Character::find('first',$options);
 	}
 
 	/**

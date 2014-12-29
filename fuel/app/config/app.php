@@ -15,4 +15,10 @@ return array(
       3 => 'S',
     ),
   ),
+  'COMMENT' => array(
+    'TYPE' => array(
+      'TOP'       => 1,
+      'CHARACTER' => 2,
+    ),
+  ),
 );

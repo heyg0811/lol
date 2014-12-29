@@ -56,7 +56,7 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
-	<div class="col-md-10 col-md-offset-1 content">
+	<div class="col-md-10 col-md-offset-1 content" style="min-height:75%">
 		<div class="row">
 			<header>
 				<div class="head-img">
@@ -98,15 +98,12 @@
 			<div class="col-sm-7">
 				<h4><span class="glyphicon glyphicon-check" aria-hidden="true"></span>　最新情報</h4>
 				<ul class="list">
-					<li>
-						<a>ほげほげほげほげほげほげほげほげほげほげほげほげ</a>
-					</li>
-					<li>
-						<a>ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ</a>
-					</li>
-					<li>
-						<a>ほげほげほげほげほげほげ</a>
-					</li>
+					<?php $notices = Model_Notice::find('all',array('limit'=>3,'order_by'=>array('updated_at'=>'desc'))); ?>
+					<?php foreach ($notices as $notice): ?>
+						<li>
+							<a target="_blank" href="<?php echo $notice['url']; ?>"><?php echo $notice['title']?></a>
+						</li>
+					<?php endforeach; ?>
 				</ul>
 			</div>
 		</div>
