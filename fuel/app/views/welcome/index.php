@@ -2,12 +2,36 @@
 <div class="row">
 	<h3 class="bs-callout bs-callout-info">最新情報</h3>
 	<ul class="list">
+		<li class="hidden-xs">
+			<div class="col-sm-2 col-lg-2">
+				作成日
+			</div>
+			<div class="col-sm-2 col-lg-2">
+				更新日
+			</div>
+			<div class="col-sm-8 col-lg-8">
+				タイトル
+			</div>
+		</li>
 		<?php foreach ($notices as $notice): ?>
 			<li>
-				<div class="col-sm-3 col-lg-2">
-					<?php echo date('Y-m-d',$notice['created_at']); ?>
+				<div class="hidden-xs">
+					<div class="col-sm-2 col-lg-2">
+						<?php echo date('Y-m-d',$notice['created_at']); ?>
+					</div>
+					<div class="col-sm-2 col-lg-2">
+						<?php echo date('Y-m-d',$notice['updated_at']); ?>
+					</div>
 				</div>
-				<div class="col-sm-9 col-lg-10">
+				<div class="visible-xs">
+					<div class="col-sm-2 col-lg-2">
+						作成日 : <?php echo date('Y-m-d',$notice['created_at']); ?>
+					</div>
+					<div class="col-sm-2 col-lg-2">
+						更新日 : <?php echo date('Y-m-d',$notice['updated_at']); ?>
+					</div>
+				</div>
+				<div class="col-sm-8 col-lg-8">
 					<a target="_blank" href="<?php echo $notice['url']; ?>">
 						<?php echo $notice['title']; ?>
 					</a>
