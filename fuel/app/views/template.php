@@ -21,7 +21,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="/">ソウスラ攻略</a>
+	      <a class="navbar-brand" href="/">プレガイド</a>
 	    </div>
 	
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,6 +68,57 @@
 			<div class="container-fluid">
 			  <div class="col-xs-12">
 			    <?php echo $content; ?>
+			    <div id="comment" class="row">
+						<h3 class="bs-callout bs-callout-info">コメント</h3>
+						<?php if($alert = Session::get_flash('alert')): ?>
+							<div class="bs-component">
+	              <div class="alert alert-dismissable alert-<?php echo $alert['type']; ?>">
+	                <button type="button" class="close" data-dismiss="alert">×</button>
+	                <h4><?php if(!empty($alert['title'])){echo $alert['title'];} ?></h4>
+	                <p><?php if(!empty($alert['body'])){echo $alert['body'];} ?></p>
+	              </div>
+	            </div>
+            <?php endif; ?>
+						<div class="comment-list">
+							<ul class="list">
+								<?php if(!$comments = Model_Comment::getComments()): ?>
+									<h3 class="text-center">投稿されていません</h3>
+								<?php endif;?>
+								<?php foreach (Model_Comment::getComments() as $comment): ?>
+									<li>
+										<div class="row">
+											<div class="col-sm-8 hidden-xs">
+												<?php echo $comment['name']; ?>
+											</div>
+											<div class="col-sm-4">
+												- <?php echo date('Y年m月d日 H:i:s', $comment['created_at']); ?>
+											</div>
+											<div class="col-xs-12 visible-xs">
+												名前 : <?php echo $comment['name']; ?>
+											</div>
+										</div>
+										<p><?php echo $comment['body']; ?></p>
+									</li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
+						<div class="well">
+							<form class="form-horizontal" action="/comment/add" method="post">
+								<div class="form-group">
+						      <?php echo Form::label('名前', 'name'); ?>
+        					<?php echo Form::input('comment[name]','',array('class'=>'form-control')); ?>
+						    </div>
+								<div class="form-group">
+						      <?php echo Form::label('コメント', 'body'); ?>
+        					<?php echo Form::textarea('comment[body]','',array('class'=>'form-control','rows'=>'4')); ?>
+						    </div>
+						    <?php echo \Form::csrf(); ?>
+						    <div class="form-group">
+						    	<?php echo Form::submit('','投稿',array('class'=>'btn btn-primary pull-right')); ?>
+						    </div>
+							</form>
+						</div>
+					</div>
 			  </div>
       </div>
 		</div>

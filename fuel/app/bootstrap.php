@@ -6,9 +6,12 @@ require COREPATH.'bootstrap.php';
 Autoloader::add_classes(array(
 	// Add classes you want to override here
 	// Example: 'View' => APPPATH.'classes/view.php',
-	'Config'  => APPPATH . 'classes/extension/config.php',
-	'Uri'     => APPPATH . 'classes/extension/uri.php',
-	'MyModel' => APPPATH . 'classes/extension/mymodel.php',
+	'Uri'           => APPPATH . 'classes/extension/uri.php',
+	'Config'        => APPPATH . 'classes/extension/config.php',
+	'Validation'    => APPPATH . 'classes/extension/validation.php',
+  'Form'          => APPPATH . 'classes/extension/form.php',
+  'Form_Instance' => APPPATH . 'classes/extension/instance.php',
+	'MyModel'       => APPPATH . 'classes/extension/mymodel.php',
 ));
 
 // Register the autoloader

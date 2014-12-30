@@ -5,7 +5,7 @@ class Model_Comment extends MyModel
   protected static $_table_name = 'comment';
   protected static $_properties = array(
     'id',
-    'type',
+    'path',
     'name',
     'body',
     'created_at',
@@ -28,7 +28,45 @@ class Model_Comment extends MyModel
     ->add_rule('required')
     ->add_rule('max_length', 65535);
     
-    $validation->run();
+    $form_data = Input::post(static::$_table_name, null);
+
+    $validation->run($form_data , static::$_table_name);
     return $validation;
+  }
+  
+  /**
+   * @brif    パス生成
+   * @access  public
+   * @return
+   */
+  public static function getPath($url=null)
+  {
+    $path = null;
+    if (empty($url)) {
+      $path = $_SERVER["REQUEST_URI"];
+    } else {
+      $path = parse_url($url, PHP_URL_PATH);
+      if ($query = parse_url($url, PHP_URL_QUERY)) {
+        $path .= '?'. $query;
+      }
+    }
+    return $path;
+  }
+  
+  /**
+   * @brif    urlに合ったコメントリストを取得
+   * @access  public
+   * @return
+   */
+  public static function getComments() {
+    $options = array(
+      'where'=>array(
+        'path'=>static::getPath()
+      ),
+      'order_by'=>array(
+        'created_at'=>'desc'
+      ),
+    );
+    return static::find('all',$options);
   }
 }

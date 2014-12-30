@@ -20,9 +20,12 @@ class Controller_Comment extends Controller {
    */
 	public function action_add()
 	{
+	  $path = Model_Comment::getPath(Input::referrer());
+	  $url  = $path . '#comment';
+	  
 	  // トークンチェック
     if (!Security::check_token()) {
-      Response::redirect_back('/', 'refresh');
+      Response::redirect($url);
     }
     
     // バリデーション
@@ -30,22 +33,20 @@ class Controller_Comment extends Controller {
     $validation = $comment_model->validate();
     $errors = $validation->error();
     if (!empty($errors)) {
-      Response::redirect_back('/', 'refresh');
+      MyUtil::alert_set('入力エラーがあります','danger',$validation->show_errors());
+      Response::redirect($url);
     }
     $comment_data = $validation->validated();
     $comment_data['created_at'] = time();
-    switch (parse_url(Input::referrer(),PHP_URL_PATH)){
-      case '/':
-        $comment_data['type'] = Config::get('COMMENT.TYPE.TOP');
-        break;
-    }
-    
+    $comment_data['path'] = $path;
     
     // データの追加
-    if ($comment_model->insert($comment_data)) {
+    if (!$comment_model->insert($comment_data)) {
       // エラー設定
-      Response::redirect_back('/', 'refresh');
+      MyUtil::alert_set('投稿時にエラーが発生しました','danger');
+      Response::redirect($url);
     }
-    Response::redirect_back('/', 'refresh');
+    MyUtil::alert_set('投稿しました','info');
+    Response::redirect($url);
 	}
 }

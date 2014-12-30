@@ -62,7 +62,7 @@ class Controller_Welcome extends Controller_Template {
     $this->template->content->pagination = $pagination;
     
     $options = array(
-      'where' => array(array('type',Config::get('COMMENT.TYPE.TOP'))),
+      'where' => array(array('path'=>Model_Comment::getPath())),
       'order_by' => array('created_at'=>'desc'),
     );
     $this->template->content->comments = Model_Comment::find('all',$options);

@@ -1,3 +1,4 @@
+<h2 class="text-center">ソウルスラッシュサガ</h2>
 <div class="row">
 	<h3 class="bs-callout bs-callout-info">最新情報</h3>
 	<ul class="list">
@@ -57,47 +58,5 @@
 				</li>
 			</ul>
   	</div>
-	</div>
-</div>
-<div class="row">
-	<h3 class="bs-callout bs-callout-info">コメント</h3>
-	<div class="comment-list">
-		<ul class="list">
-			<?php foreach ($comments as $comment): ?>
-				<li>
-					<div class="row">
-						<div class="col-sm-4">
-							<?php echo $comment['name']; ?>
-						</div>
-						<div class="col-sm-4 pull-right">
-							- <?php echo date('Y年m月d日', $comment['created_at']); ?>
-						</div>
-					</div>
-					<p><?php echo $comment['body']; ?></p>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-	</div>
-	<div class="well">
-		<form class="form-horizontal" action="/comment/add" method="post">
-			<div class="form-group">
-	      <label for="inputName" class="col-lg-2 control-label">名前</label>
-	      <div class="col-lg-10">
-	        <input name="name" type="text" class="form-control" id="inputName">
-	      </div>
-	    </div>
-			<div class="form-group">
-	      <label for="textArea" class="col-lg-2 control-label">本文</label>
-	      <div class="col-lg-10">
-	        <textarea name="body" class="form-control" rows="3" cols="3" id="textArea"></textarea>
-	      </div>
-	    </div>
-	    <?php echo \Form::csrf(); ?>
-	    <div class="form-group">
-	      <div class="col-lg-10 col-lg-offset-2">
-	        <button type="submit" class="btn btn-primary pull-right">Submit</button>
-	      </div>
-	    </div>
-		</form>
 	</div>
 </div>

@@ -1,0 +1,113 @@
+/* bootstrap-custom */
+
+.form-horizontal .form-group {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* end bootstrap-custom */
+
+a {
+  color:white;
+  cursor:pointer;
+}
+
+#comment {
+  padding-top:4em;
+}
+
+.bs-callout{
+  padding: 15px;
+  margin: 20px 0;
+  border-left: 1px solid #eee;
+  border-left-width: 5px;
+}
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.bs-callout-warning {
+  border-left-color: #3c763d;
+}
+
+.list {
+  list-style:none;
+  margin-left:-30px;
+}
+.list > li {
+  padding-bottom:15px;
+}
+
+.footer {
+  min-height:200px;
+  padding-top:30px;
+  background-color: #375a7f;
+}
+
+.content {
+  margin-top:60px;
+  background-color: #222222;
+  padding-bottom:30px;
+}
+
+/* キャラクター画面用 */
+.char-list {
+  margin-bottom:50px;
+}
+.char-name {
+  text-align:center;
+  margin-bottom:20px;
+}
+.char-intro > p {
+  font-size:1.2em;
+}
+.char-intro > .row {
+  margin-bottom:20px;
+}
+.char-skill {
+  font-size:1.1em;
+}
+.char-rank{
+  float: right !important;
+  font-size:0.7em;
+  margin-top:5px;
+  margin-right:50px;
+}
+@media (min-width: 992px) {
+  .head-img {
+    width:80%;
+    margin:0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .head-img {
+    width:70%;
+    margin:0 auto;
+  }
+}
+
+.comment-list {
+  max-height:300px;
+  overflow-x: hidden;
+  margin-bottom:30px;
+}
+
+.iframe-content {
+    position: relative;
+    width: 100%;
+    padding: 75% 0 0 0;
+    text-align:center;
+}
+.iframe-content iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    padding:0 10%;
+}
