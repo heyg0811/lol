@@ -2,9 +2,32 @@
 <div class="head-img">
   <?php echo Asset::img('character/card/'.$character['path'].'.png', array('class'=>'img-responsive')); ?>
 </div>
-
+<div class="row" style="margin-top:50px; margin-bottom:30px">
+	<div class="hidden-xs">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:100%;height:100px"
+			     data-ad-client="ca-pub-8972128233832989"
+			     data-ad-slot="8815518551"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div class="visible-xs">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:100%;height:250px"
+			     data-ad-client="ca-pub-8972128233832989"
+			     data-ad-slot="8815518551"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+</div>
 <h2 class="bs-callout bs-callout-info">スキル</h2>
-<?php foreach ($character['skill'] as $skill): ?>
+<?php foreach ($character['skill'] as $key => $skill): ?>
   <h3>- <?php echo $skill['name']; ?></h3>
   <div class="row char-skill">
     <div class="col-xs-12">
@@ -26,4 +49,30 @@
       <iframe src="<?php echo $skill['url']; ?>" frameborder="0"></iframe>
     </div>
   <?php endif; ?>
+  <?php if($key == 1):?>
+    <div class="row" style="margin-bottom:50px;">
+			<div class="hidden-xs">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- side -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:100%;height:100px"
+					     data-ad-client="ca-pub-8972128233832989"
+					     data-ad-slot="8815518551"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			<div class="visible-xs">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- side -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:100%;height:250px"
+					     data-ad-client="ca-pub-8972128233832989"
+					     data-ad-slot="8815518551"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+  <?php endif;?>
 <?php endforeach; ?>

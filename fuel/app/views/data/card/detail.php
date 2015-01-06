@@ -13,7 +13,30 @@
   	</div>
   </div>
 </div>
-
+<div class="row" style="margin-top:50px; margin-bottom:30px">
+	<div class="hidden-xs">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:100%;height:100px"
+			     data-ad-client="ca-pub-8972128233832989"
+			     data-ad-slot="8815518551"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div class="visible-xs">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:100%;height:250px"
+			     data-ad-client="ca-pub-8972128233832989"
+			     data-ad-slot="8815518551"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+</div>
 <div class="row">
   <h3 class="bs-callout bs-callout-info">進化前</h3>
   <div class="col-xs-12">

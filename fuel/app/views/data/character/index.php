@@ -1,5 +1,5 @@
 <h2 class="bs-callout bs-callout-info">キャラクター一覧</h2>
-<?php foreach ($characters as $character): ?>
+<?php foreach ($characters as $key => $character): ?>
   <a href="detail?id=<?php echo $character['id']; ?>">
 	  <div class="row char-list">
   	  <div class="col-sm-4 col-lg-3">
@@ -19,4 +19,30 @@
   	  </div>
   	</div>
 	</a>
+	<?php if ($key == 3 || $key == 6): ?>
+		<div class="row" style="margin-bottom:50px">
+			<div class="hidden-xs">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- side -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:100%;height:100px"
+					     data-ad-client="ca-pub-8972128233832989"
+					     data-ad-slot="8815518551"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			<div class="visible-xs">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- side -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:100%;height:250px"
+					     data-ad-client="ca-pub-8972128233832989"
+					     data-ad-slot="8815518551"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+	<?php endif;?>
 <?php endforeach; ?>
