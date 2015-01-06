@@ -49,9 +49,9 @@
 	      </ul>
 	      <form class="navbar-form navbar-right" role="search">
 	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="検索">
+	          <input type="text" class="form-control" placeholder="未実装">
 	        </div>
-	        <button type="submit" class="btn btn-default">検索</button>
+	        <button type="button" class="btn btn-default">検索</button>
 	      </form>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
