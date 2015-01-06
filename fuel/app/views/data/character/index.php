@@ -21,7 +21,7 @@
 	</a>
 	<?php if ($key == 3 || $key == 6): ?>
 		<div class="row" style="margin-bottom:50px">
-			<div class="hidden-xs">
+			<?php if (MyUtil::getDevice() === 'PC'): ?>
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<!-- side -->
 					<ins class="adsbygoogle"
@@ -31,8 +31,7 @@
 					<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
-			</div>
-			<div class="visible-xs">
+			<?php else: ?>
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<!-- side -->
 					<ins class="adsbygoogle"
@@ -42,7 +41,7 @@
 					<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
-			</div>
+			<?php endif; ?>
 		</div>
 	<?php endif;?>
 <?php endforeach; ?>

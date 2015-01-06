@@ -106,29 +106,28 @@
 								</ul>
 							</div>
 							<div class="row" style="margin-bottom:50px;">
-						<div class="hidden-xs">
-							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-								<!-- no-side1 -->
-								<ins class="adsbygoogle"
-								     style="display:inline-block;width:100%;height:100px"
-								     data-ad-client="ca-pub-8972128233832989"
-								     data-ad-slot="7757587752"></ins>
-								<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-							</script>
-						</div>
-						<div class="visible-xs">
-							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-								<!-- no-side1 -->
-								<ins class="adsbygoogle"
-								     style="display:inline-block;width:100%;height:250px"
-								     data-ad-client="ca-pub-8972128233832989"
-								     data-ad-slot="7757587752"></ins>
-								<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-							</script>
-						</div>
-					</div>
+								<?php if (MyUtil::getDevice() === 'PC'): ?>
+									<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+										<!-- no-side1 -->
+										<ins class="adsbygoogle"
+										     style="display:inline-block;width:100%;height:100px"
+										     data-ad-client="ca-pub-8972128233832989"
+										     data-ad-slot="7757587752"></ins>
+										<script>
+										(adsbygoogle = window.adsbygoogle || []).push({});
+									</script>
+								<?php else: ?>
+									<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+										<!-- no-side1 -->
+										<ins class="adsbygoogle"
+										     style="display:inline-block;width:100%;height:250px"
+										     data-ad-client="ca-pub-8972128233832989"
+										     data-ad-slot="7757587752"></ins>
+										<script>
+										(adsbygoogle = window.adsbygoogle || []).push({});
+									</script>
+								<?php endif; ?>
+							</div>
 							<div class="well">
 								<form class="form-horizontal" action="/comment/add" method="post">
 									<div class="form-group">

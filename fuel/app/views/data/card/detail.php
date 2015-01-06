@@ -14,7 +14,7 @@
   </div>
 </div>
 <div class="row" style="margin-top:50px; margin-bottom:30px">
-	<div class="hidden-xs">
+	<?php if (MyUtil::getDevice() === 'PC'): ?>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- side -->
 			<ins class="adsbygoogle"
@@ -24,8 +24,7 @@
 			<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	</div>
-	<div class="visible-xs">
+	<?php else: ?>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- side -->
 			<ins class="adsbygoogle"
@@ -35,7 +34,7 @@
 			<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	</div>
+	<?php endif; ?>
 </div>
 <div class="row">
   <h3 class="bs-callout bs-callout-info">進化前</h3>

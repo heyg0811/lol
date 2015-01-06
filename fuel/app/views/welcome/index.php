@@ -44,7 +44,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="hidden-xs">
+	<?php if (MyUtil::getDevice() === 'PC'): ?>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- side -->
 			<ins class="adsbygoogle"
@@ -54,8 +54,7 @@
 			<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	</div>
-	<div class="visible-xs">
+	<?php else: ?>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- side -->
 			<ins class="adsbygoogle"
@@ -65,7 +64,7 @@
 			<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	</div>
+	<?php endif; ?>
 </div>
 <div class="row">
 	<h2 class="bs-callout bs-callout-info">最新キャラクター</h2>
