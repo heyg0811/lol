@@ -121,7 +121,7 @@
 							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 								<!-- no-side1 -->
 								<ins class="adsbygoogle"
-								     style="display:inline-block;width:100%;height:200px"
+								     style="display:inline-block;width:100%;height:250px"
 								     data-ad-client="ca-pub-8972128233832989"
 								     data-ad-slot="7757587752"></ins>
 								<script>
