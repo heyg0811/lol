@@ -1,3 +1,4 @@
+<?php Model_Counter::counts(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -135,7 +136,7 @@
 							アクセス
 						</div>
 						<div class="col-xs-6">
-							52358
+							<?php echo Model_Counter::query()->count();?>
 						</div>
 					</li>
 					<li>
@@ -143,7 +144,15 @@
 							コメント
 						</div>
 						<div class="col-xs-6">
-							523
+							<?php echo Model_Comment::query()->count();?>
+						</div>
+					</li>
+					<li>
+						<div class="col-xs-6">
+							レス
+						</div>
+						<div class="col-xs-6">
+							<?php echo MyUtil::getBbsCount();?>
 						</div>
 					</li>
 				</ul>

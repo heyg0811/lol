@@ -60,4 +60,35 @@ class MyUtil {
 	  
 	  return sprintf(Config::get('CARD.IMG.STYLE'), $path, $x_pos, $y_pos);
 	}
+	
+	public static function getDevice(){
+    //ユーザーエージェント取得
+		$ua = $_SERVER['HTTP_USER_AGENT'];
+
+		if(strpos($ua,'iPhone') !== false || strpos($ua,'iPad') !== false){
+      //iPhone
+			$ua = 'iOS';
+		}
+		elseif(strpos($ua,'Android') !== false || (strpos($ua, 'Mobile') !== false)){
+      //Android
+			$ua = 'Android';
+		}
+		else{
+			$ua = 'PC';
+		}
+
+		return $ua;
+	}
+	
+	public static function getBbsCount()
+	{
+		$sub_query = array(
+			'(SELECT COUNT(id) FROM bbs_friend)',
+			'(SELECT COUNT(id) FROM bbs_guild)',
+			'(SELECT COUNT(id) FROM bbs_invite)',
+			'(SELECT COUNT(id) FROM bbs_party)',
+		);
+		$result = DB::query('SELECT ('.implode('+',$sub_query).') AS count')->execute()->as_array();
+		return $result[0]['count'];
+	}
 }
