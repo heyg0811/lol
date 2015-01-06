@@ -1,55 +1,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://soulslash.plaguide.jp</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/data/character/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/data/card/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/bbs/friend/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/bbs/guild/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/bbs/invite/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/bbs/party/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/data/item/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>http://soulslash.plaguide.jp/data/dungeon/index</loc>
-    <lastmod>2015-01-16</lastmod>
+    <lastmod>2015-01-06</lastmod>
     <changefreq>daily</chsangefreq>
     <priority>0.4</priority>
   </url>
