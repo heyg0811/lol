@@ -105,7 +105,7 @@
 									<?php endforeach; ?>
 								</ul>
 							</div>
-							<div class="row" style="margin-bottom:50px;">
+							<div style="margin-bottom:50px">
 								<?php if (MyUtil::getDevice() === 'PC'): ?>
 									<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 										<!-- no-side1 -->
