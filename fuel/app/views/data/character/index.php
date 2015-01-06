@@ -1,4 +1,4 @@
-<h3 class="bs-callout bs-callout-info">キャラクター一覧</h3>
+<h2 class="bs-callout bs-callout-info">キャラクター一覧</h2>
 <?php foreach ($characters as $character): ?>
   <a href="detail?id=<?php echo $character['id']; ?>">
 	  <div class="row char-list">

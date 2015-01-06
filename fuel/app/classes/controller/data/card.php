@@ -42,7 +42,39 @@ class Controller_Data_Card extends Controller_Template {
    */
 	public function action_index()
 	{
-		$this->template->title = 'カード';
+		$this->template->title = 'カード一覧';
     $this->template->content  = View::forge('data/card/index');
+    $card_model = new Model_Card();
+    $config = array(
+      'pagination_url' => '/data/card/index',
+      'total_items' => $card_model->query()->where('name','!=','')->count(),
+      'per_page' => 10,
+      'uri_segment' => 'page',
+    );
+    $pagination = Pagination::forge('mypagination',$config);
+    
+    $options = array(
+      'where' => array(array('name','!=','')),
+      'limit' => $pagination->per_page,
+      'offset' => $pagination->offset,
+    );
+    $cards = $card_model->find('all', $options);
+    $this->template->content->cards = $card_model->decode($cards);
+    $this->template->content->pagination = $pagination;
+	}
+	
+  /**
+   * @brif   カード詳細
+   * @access public
+   * @return
+   */
+	public function action_detail()
+	{
+		$this->template->title = 'カード詳細';
+    $this->template->content  = View::forge('data/card/detail');
+    $card_model = new Model_Card();
+    $card = $card_model->find(Input::get('id',null));
+    $card = $card_model->decode($card);
+    $this->template->content->card = $card_model->formatAttr($card);
 	}
 }

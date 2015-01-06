@@ -76,9 +76,18 @@ class MyModel extends \Orm\Model
    * @access  public
    * @return
    */
-  public static function encode(&$character) {
-    foreach (static::$_json_list as $val) {
-      $character[$val] = json_decode($character[$val],true);
+  public static function decode($data) {
+    if (is_array($data)) {
+      foreach ($data as &$val) {
+        foreach (static::$_json_list as $key) {
+          $val[$key] = json_decode($val[$key],true);
+        }
+      }
+    } else {
+      foreach (static::$_json_list as $val) {
+        $data[$val] = json_decode($data[$val],true);
+      }
     }
+    return $data;
   }
 }

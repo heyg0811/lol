@@ -62,7 +62,6 @@ class Controller_Data_Character extends Controller_Template {
       Response::redirect('character/index');
     }
     
-    Model_Character::encode($character);
-    $this->template->content->character = $character;
+    $this->template->content->character = Model_Character::decode($character);;
 	}
 }

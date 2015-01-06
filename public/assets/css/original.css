@@ -55,6 +55,18 @@ a {
   padding-bottom:30px;
 }
 
+/* カード画面用*/
+.card-list {
+  height:auto;
+  min-height:76px;
+  margin-bottom:50px;
+}
+
+.card-img {
+  width: 84px;
+  height: 76px;
+}
+
 /* キャラクター画面用 */
 .char-list {
   margin-bottom:50px;
@@ -91,9 +103,16 @@ a {
   }
 }
 
+/* コメント用 */
 .comment-list {
   max-height:300px;
   overflow-x: hidden;
+  margin-bottom:30px;
+}
+
+/* 掲示板用 */
+.bbs-list {
+  min-height:300px;
   margin-bottom:30px;
 }
 

@@ -1,8 +1,8 @@
 <h2 class="text-center">ソウルスラッシュサガ</h2>
 <div class="row">
-	<h3 class="bs-callout bs-callout-info">最新情報</h3>
+	<h2 class="bs-callout bs-callout-info">最新情報</h2>
 	<ul class="list">
-		<li class="hidden-xs">
+		<li class="hidden-xs text-muted">
 			<div class="col-sm-2 col-lg-2">
 				作成日
 			</div>
@@ -25,10 +25,10 @@
 				</div>
 				<div class="visible-xs">
 					<div class="col-sm-2 col-lg-2">
-						作成日 : <?php echo date('Y-m-d',$notice['created_at']); ?>
+						<span class="text-muted">作成日</span>　<?php echo date('Y-m-d',$notice['created_at']); ?>
 					</div>
 					<div class="col-sm-2 col-lg-2">
-						更新日 : <?php echo date('Y-m-d',$notice['updated_at']); ?>
+						<span class="text-muted">更新日</span>　<?php echo date('Y-m-d',$notice['updated_at']); ?>
 					</div>
 				</div>
 				<div class="col-sm-8 col-lg-8">
@@ -44,7 +44,7 @@
 	</div>
 </div>
 <div class="row">
-	<h3 class="bs-callout bs-callout-info">最新キャラクター</h3>
+	<h2 class="bs-callout bs-callout-info">最新キャラクター</h2>
 	<div class="col-sm-4 col-lg-3">
 		<a href="/data/character/detail?id=<?php echo $character['id']; ?>">
     	<?php echo Asset::img('character/'.$character['path'].'.png', array('class'=>'img-responsive')); ?>
@@ -54,16 +54,16 @@
   	<div class="row">
 			<ul class="list">
 				<li>
-					<div class="col-sm-3 col-lg-2">
-						- 実装日
+					<div class="col-sm-3 col-lg-2 text-muted">
+						実装日
 					</div>
 					<div class="col-sm-9 col-lg-10">
 						<?php echo date('Y-m-d', $character['created_at']); ?>
 					</div>
 				</li>
 				<li>
-					<div class="col-sm-3 col-lg-2">
-						- キャラ名
+					<div class="col-sm-3 col-lg-2 text-muted">
+						キャラ名
 					</div>
 					<div class="col-sm-9 col-lg-10">
 						<a href="/data/character/detail?id=<?php echo $character['id']; ?>">
@@ -72,8 +72,8 @@
 					</div>
 				</li>
 				<li>
-					<div class="col-sm-3 col-lg-2">
-						- 特徴
+					<div class="col-sm-3 col-lg-2 text-muted">
+						特徴
 					</div>
 					<div class="col-sm-9 col-lg-10">
 						<p class="text-danger"><?php echo $character['caption']; ?></p>

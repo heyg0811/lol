@@ -8,4 +8,5 @@
  */
 
 return array(
+  'CARD_IMG_URL' => '/assets/img/card/',
 );
