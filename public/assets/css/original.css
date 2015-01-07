@@ -12,6 +12,10 @@ a {
   cursor:pointer;
 }
 
+dd {
+  margin-bottom:20px;
+}
+
 #comment {
   padding-top:4em;
 }

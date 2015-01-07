@@ -1,5 +1,34 @@
 <h2 class="text-center">ソウルスラッシュサガ</h2>
 <div class="row">
+	<h2 class="bs-callout bs-callout-info">ゲーム情報</h2>
+	<dl class="dl-horizontal" style="font-size:1.1em">
+		<dt>ソウスラとは</dt>
+		<dd>ネクソンがスマートフォン向けにリリースした横スクロールアクションゲームです。</dd>
+		<dt>カテゴリ</dt>
+		<dd>MORPG</dd>
+		<dt>概要</dt>
+		<dd>
+			<p>キャラクターの装備はなく、5枚装備出来るモンスターカードでステータスの大半が決まります。</p>
+			<p>最大3人の協力プレイが可能で、対人戦もあります。</p>
+		</dd>
+		<dt>課金可否</dt>
+		<dd>
+			<p>課金をすれば強くはなりますが、課金をしなくてもログインボーナスや、ランキングでクリスタルが沢山もらえる為、無課金でも十分プレイが可能です。</p>
+			<p>最終的に課金してもしなくても、運の要素が大きいです。</p>
+		</dd>
+	</dl>
+</div>
+<div class="row">
+	<h2 class="bs-callout bs-callout-info">サイト情報</h2>
+	<dl class="dl-horizontal" style="font-size:1.1em">
+		<dt>概要</dt>
+		<dd>
+			<p>ソウスラをプレイ中に良い攻略サイトが無かったので、簡単ですが作成しました。</p>
+			<p>もっと、こんな情報が欲しい！や、ここはこうだよ！等があれば、コメント機能を用意しておりますので、ご指摘お願いします。</p>
+		</dd>
+	</dl>
+</div>
+<div class="row">
 	<h2 class="bs-callout bs-callout-info">最新情報</h2>
 	<ul class="list">
 		<li class="hidden-xs text-muted">
