@@ -42,7 +42,7 @@ class Controller_Bbs_Party extends Controller_Template {
    */
 	public function action_index()
 	{
-		$this->template->title = 'パーティ募集掲示板';
+		$this->template->title = 'パーティ募集';
     $this->template->content  = View::forge('bbs/party/index');
     
     $party_model = new Model_BbsParty();

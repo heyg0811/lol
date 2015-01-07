@@ -42,7 +42,7 @@ class Controller_Bbs_Guild extends Controller_Template {
    */
 	public function action_index()
 	{
-		$this->template->title = 'アイテム';
+		$this->template->title = 'ギルド募集';
     $this->template->content  = View::forge('bbs/guild/index');
     
     $guild_model = new Model_BbsGuild();

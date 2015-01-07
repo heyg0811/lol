@@ -42,7 +42,7 @@ class Controller_Data_Card extends Controller_Template {
    */
 	public function action_index()
 	{
-		$this->template->title = 'カード一覧';
+	  $this->template->title = 'カード一覧';
     $this->template->content  = View::forge('data/card/index');
     $card_model = new Model_Card();
     $config = array(
@@ -70,11 +70,11 @@ class Controller_Data_Card extends Controller_Template {
    */
 	public function action_detail()
 	{
-		$this->template->title = 'カード詳細';
     $this->template->content  = View::forge('data/card/detail');
     $card_model = new Model_Card();
     $card = $card_model->find(Input::get('id',null));
     $card = $card_model->decode($card);
+    $this->template->title = $card['name'];
     $this->template->content->card = $card_model->formatAttr($card);
 	}
 }

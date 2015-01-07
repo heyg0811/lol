@@ -42,7 +42,7 @@ class Controller_Welcome extends Controller_Template {
    */
 	public function action_index()
 	{
-		$this->template->title = 'トップ';
+		$this->template->title = 'プレガイド';
     $this->template->content  = View::forge('welcome/index');
     
     $config = array(

@@ -42,7 +42,7 @@ class Controller_Bbs_Friend extends Controller_Template {
    */
 	public function action_index()
 	{
-		$this->template->title = 'アイテム';
+		$this->template->title = 'フレンド募集';
     $this->template->content  = View::forge('bbs/friend/index');
     
     $friend_model = new Model_BbsFriend();

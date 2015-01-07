@@ -54,14 +54,14 @@ class Controller_Data_Character extends Controller_Template {
    */
 	public function action_detail()
 	{
-		$this->template->title = 'キャラ詳細';
+		
     $this->template->content  = View::forge('data/character/detail');
     $character = Model_Character::find(Input::get('id',null));
     
     if (empty($character['skill'])) {
       Response::redirect('character/index');
     }
-    
+    $this->template->title = $character['name'];
     $this->template->content->character = Model_Character::decode($character);;
 	}
 }
